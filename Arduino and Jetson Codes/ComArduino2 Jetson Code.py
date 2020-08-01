@@ -6,7 +6,9 @@
 
 # the purpose of this program and the associated Arduino program is to 
 # demonstrate a system for sending and receiving data between a PC and an Arduino.
-
+# =====================================
+#  Function Definitions
+#=====================================
 # The key functions are:
 #    sendToArduino(str) which sends the given string to the Arduino. The string may
 #                       contain characters with any of the values 0 to 255
@@ -19,7 +21,7 @@
 
 # the overall process followed by the demo program is as follows
 #   open the serial connection to the Arduino - which causes the Arduino to reset
-#   wait for a message from the Arduino to give it time to reset
+#   wait for a message "Arduino Ready" from the Arduino to give it time to reset
 #   loop through a series of test messages
 #      send a message and display it on the PC screen
 #      wait for a reply and display it on the PC
@@ -46,8 +48,6 @@
 #       serPort = "/dev/ttyS80" or ACM1, ACM0
 #       baudRate = 9600
 #       ser = serial.Serial(serPort, baudRate)
-# # =====================================
-#  Function Definitions
 # =====================================
 
 import time
